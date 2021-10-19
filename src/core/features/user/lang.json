@@ -1,11 +1,11 @@
 {
-    "address": "Dirección",
+    "address": "DirecciÃ³n",
     "city": "Ciudad",
     "contact": "Contacto",
-    "country": "País",
+    "country": "PaÃ­s",
     "description": "Description",
     "details": "Detalles",
-    "detailsnotavailable": "Los detalles de este usuario no están disponibles para ti.",
+    "detailsnotavailable": "Los detalles de este usuario no estï¿½n disponibles para ti.",
     "editingteacher": "Profesor",
     "email": "Correo electronico",
     "emailagain": "Correo electronico (De nuevo)",
@@ -24,5 +24,5 @@
     "student": "Estudiante",
     "teacher": "Profesor no editor",
     "userwithid": "Usuario con ID {{id}}",
-    "webpage": "Página web"
+    "webpage": "Pï¿½gina web"
 }

@@ -3,6 +3,6 @@
     "emptyfilelist": "There are no files to show.",
     "erroruploadnotworking": "Unfortunately it is currently not possible to upload files to your site.",
     "files": "Files",
-    "privatefiles": "Private files",
-    "sitefiles": "Site files"
+    "privatefiles": "Archivos privados",
+    "sitefiles": "Archivos del sitio"
 }
