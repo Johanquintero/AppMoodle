@@ -64,7 +64,7 @@ export class CoreLoginSitePage implements OnInit {
         protected formBuilder: FormBuilder,
     ) {
 
-        let url = 'http://10.10.10.70/moodle';
+        let url = 'https://indeseg.edu.co/moodle';
         this.siteSelector = CoreConstants.CONFIG.multisitesdisplay;
 
         const siteFinderSettings: Partial<SiteFinderSettings> = CoreConstants.CONFIG.sitefindersettings || {};
@@ -82,7 +82,8 @@ export class CoreLoginSitePage implements OnInit {
         if (CoreLoginHelper.hasSeveralFixedSites()) {
             url = this.initSiteSelector();
         } else if (CoreConstants.CONFIG.enableonboarding && !CoreApp.isIOS()) {
-            this.initOnboarding();
+            this.connect(new Event('click'), 'https://indeseg.edu.co/moodle');
+            // this.initOnboarding();
         }
 
         this.showScanQR = CoreLoginHelper.displayQRInSiteScreen();

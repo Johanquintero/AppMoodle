@@ -36,8 +36,10 @@
     --ion-text-color:           var(--text-color);
     --ion-text-color-rgb:       #{$text-color-dark-rgb};
     --subdued-text-color:     #b4b4b4;
+    --primaryIndeseg: #00a859;
 
-    --primary:      var(--brand-color);
+    // --primary:      var(--brand-color);
+    --primary:      var(--primaryIndeseg);
     --success:      #{$success-dark};
     --danger:       #{$danger-dark};
     --warning:      #{$warning-dark};
@@ -72,7 +74,8 @@
 
     --core-link-color: var(--blue-light);
 
-    --core-header-toolbar-background:   var(--black);
+    --core-header-toolbar-background:   var(--primaryIndeseg);
+    // --core-header-toolbar-background:   var(--dark);
     --core-header-toolbar-color:        var(--white);
 
     --core-tabs-background: var(--ion-color-step-200);

@@ -34,17 +34,20 @@
 
     --turquoise:       #007982; // Accent.
     --purple:          #8e24aa;
+    --blueLigth:          #40618d;        
 
     --text-color:       #{$text-color};
     --background-color: #{$background-color};
 
+    --primaryIndeseg: #00a859;
     --brand-color:          #{$brand-color};
     --brand-color-contrast: var(--text-color);
 
     --core-online-color: #5cb85c;
 
     // Named Color Variables
-    --primary:      var(--brand-color);
+    // --primary:      var(--brand-color);
+    --primary:      var(--primaryIndeseg);
     --success:      #{$success};
     --danger:       #{$danger};
     --warning:      #{$warning};
@@ -108,10 +111,12 @@
     }
 
     --core-header-toolbar-button-image-size: 44px;
-    --core-header-toolbar-background: var(--white);
+    // --core-header-toolbar-background: var(--white);
+    --core-header-toolbar-background: var(--primaryIndeseg);
     --core-header-toolbar-border-width: 3px;
+    // --core-header-toolbar-border-color: var(--brand-color);
     --core-header-toolbar-border-color: var(--brand-color);
-    --core-header-toolbar-color: var(--black);
+    --core-header-toolbar-color: var(--white);
     --core-header-toolbar-height: 56px;
     html.ios {
         --core-header-toolbar-height: 54px;
