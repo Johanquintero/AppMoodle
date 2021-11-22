@@ -95,7 +95,7 @@
     "submittedearly": "Assignment was submitted {{$a}} early",
     "submittedlate": "Assignment was submitted {{$a}} late",
     "syncblockedusercomponent": "user grade",
-    "timemodified": "Last modified",
+    "timemodified": "Última modificación",
     "timeremaining": "Time remaining",
     "ungroupedusers": "The setting 'Require group to make submission' is enabled and some users are either not a member of any group, or are a member of more than one group, so are unable to make submissions.",
     "ungroupedusersoptional": "The setting 'Students submit in groups' is enabled and some users are either not a member of any group, or are a member of more than one group. Please be aware that these students will submit as members of the 'Default group'.",

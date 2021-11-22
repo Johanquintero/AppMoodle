@@ -53,7 +53,7 @@
     "ongoingnormal": "You have answered {{$a.correct}} correctly out of {{$a.viewed}} attempts.",
     "or": "OR",
     "overview": "Overview",
-    "preview": "Preview",
+    "preview": "Vista previa",
     "progressbarteacherwarning2": "You will not see the progress bar because you can edit this lesson",
     "progresscompleted": "You have completed {{$a}}% of the lesson",
     "question": "Question",

@@ -80,9 +80,13 @@ export class CoreLoginSitePage implements OnInit {
 
         // Load fixed sites if they're set.
         if (CoreLoginHelper.hasSeveralFixedSites()) {
-            url = this.initSiteSelector();
-        } else if (CoreConstants.CONFIG.enableonboarding && !CoreApp.isIOS()) {
-            this.connect(new Event('click'), 'https://indeseg.edu.co/moodle');
+            this.connectOnly('https://indeseg.edu.co/moodle');
+            // url = this.initSiteSelector();
+        } else if (CoreConstants.CONFIG.enableonboarding && !CoreApp.isIOS()) {    
+
+            this.connectOnly('https://indeseg.edu.co/moodle');
+            // this.connect(new Event('click'), 'https://indeseg.edu.co/moodle');
+            // this.showLoginIssue('https://indeseg.edu.co/moodle', new CoreError(Translate.instant('core.login.errorexampleurl')));
             // this.initOnboarding();
         }
 
@@ -296,6 +300,41 @@ export class CoreLoginSitePage implements OnInit {
         }
     }
 
+    // simplifico funcionalidad de login johan garcia 03/11
+    async connectOnly(url, foundSite?: CoreLoginSiteInfoExtended){
+        url = url.trim();
+        // Not a demo site.
+        const modal = await CoreDomUtils.showModalLoading();
+
+        let checkResult: CoreSiteCheckResponse;
+
+        try {
+            checkResult = await CoreSites.checkSite(url);
+        } catch (error) {
+            // Attempt guessing the domain if the initial check failed
+            const domain = CoreUrl.guessMoodleDomain(url);
+
+            if (domain && domain != url) {
+                try {
+                    checkResult = await CoreSites.checkSite(domain);
+                } catch (secondError) {
+                    // Try to use the first error.
+                    modal.dismiss();
+
+                    return this.showLoginIssue(url, error || secondError);
+                }
+            } else {
+                modal.dismiss();
+
+                return this.showLoginIssue(url, error);
+            }
+        }
+
+        await this.login(checkResult, foundSite);
+
+        modal.dismiss();
+        
+    }
     /**
      * Authenticate in a demo site.
      *

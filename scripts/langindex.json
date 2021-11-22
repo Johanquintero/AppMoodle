@@ -1913,7 +1913,7 @@
   "core.login.youcanstillconnectwithcredentials": "local_moodlemobileapp",
   "core.login.yourenteredsite": "local_moodlemobileapp",
   "core.lostconnection": "local_moodlemobileapp",
-  "core.mainmenu.changesite": "local_moodlemobileapp",
+
   "core.mainmenu.help": "moodle",
   "core.mainmenu.home": "moodle",
   "core.mainmenu.logout": "moodle",

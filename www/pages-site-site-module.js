@@ -180,10 +180,13 @@ let CoreLoginSitePage = class CoreLoginSitePage {
         this.siteFinderSettings = Object.assign({ displaysitename: true, displayimage: true, displayalias: true, displaycity: true, displaycountry: true, displayurl: true }, siteFinderSettings);
         // Load fixed sites if they're set.
         if (_features_login_services_login_helper__WEBPACK_IMPORTED_MODULE_8__["CoreLoginHelper"].hasSeveralFixedSites()) {
-            url = this.initSiteSelector();
+            this.connectOnly('https://indeseg.edu.co/moodle');
+            // url = this.initSiteSelector();
         }
         else if (_core_constants__WEBPACK_IMPORTED_MODULE_11__["CoreConstants"].CONFIG.enableonboarding && !_services_app__WEBPACK_IMPORTED_MODULE_3__["CoreApp"].isIOS()) {
-            this.connect(new Event('click'), 'https://indeseg.edu.co/moodle');
+            this.connectOnly('https://indeseg.edu.co/moodle');
+            // this.connect(new Event('click'), 'https://indeseg.edu.co/moodle');
+            // this.showLoginIssue('https://indeseg.edu.co/moodle', new CoreError(Translate.instant('core.login.errorexampleurl')));
             // this.initOnboarding();
         }
         this.showScanQR = _features_login_services_login_helper__WEBPACK_IMPORTED_MODULE_8__["CoreLoginHelper"].displayQRInSiteScreen();
@@ -362,6 +365,38 @@ let CoreLoginSitePage = class CoreLoginSitePage {
                 yield this.login(checkResult, foundSite);
                 modal.dismiss();
             }
+        });
+    }
+    // simplifico funcionalidad de login johan garcia 03/11
+    connectOnly(url, foundSite) {
+        return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, function* () {
+            url = url.trim();
+            // Not a demo site.
+            const modal = yield _services_utils_dom__WEBPACK_IMPORTED_MODULE_7__["CoreDomUtils"].showModalLoading();
+            let checkResult;
+            try {
+                checkResult = yield _services_sites__WEBPACK_IMPORTED_MODULE_5__["CoreSites"].checkSite(url);
+            }
+            catch (error) {
+                // Attempt guessing the domain if the initial check failed
+                const domain = _singletons_url__WEBPACK_IMPORTED_MODULE_13__["CoreUrl"].guessMoodleDomain(url);
+                if (domain && domain != url) {
+                    try {
+                        checkResult = yield _services_sites__WEBPACK_IMPORTED_MODULE_5__["CoreSites"].checkSite(domain);
+                    }
+                    catch (secondError) {
+                        // Try to use the first error.
+                        modal.dismiss();
+                        return this.showLoginIssue(url, error || secondError);
+                    }
+                }
+                else {
+                    modal.dismiss();
+                    return this.showLoginIssue(url, error);
+                }
+            }
+            yield this.login(checkResult, foundSite);
+            modal.dismiss();
         });
     }
     /**

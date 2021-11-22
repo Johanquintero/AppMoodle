@@ -9,7 +9,7 @@
     "cannotretrievemorecategories": "Categories deeper than level {{$a}} cannot be retrieved.",
     "categories": "Course categories",
     "confirmselfenrol": "Are you sure you want to enrol yourself in this course?",
-    "courses": "Courses",
+    "courses": "Cursos",
     "downloadcourses": "Download courses",
     "enrolme": "Enrol me",
     "errorloadcategories": "An error occurred while loading categories.",

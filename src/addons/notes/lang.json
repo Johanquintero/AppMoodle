@@ -7,8 +7,8 @@
     "nonotes": "There are no notes of this type yet",
     "note": "Note",
     "notes": "Notes",
-    "personalnotes": "Personal notes",
+    "personalnotes": "Notas personales",
     "publishstate": "Context",
-    "sitenotes": "Site notes",
+    "sitenotes": "Notas del sitio",
     "warningnotenotsent": "Couldn't add note(s) to course {{course}}. {{error}}"
 }

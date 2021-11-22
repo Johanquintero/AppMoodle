@@ -1,6 +1,6 @@
 {
     "couldnotloadfiles": "The list of files could not be loaded.",
-    "emptyfilelist": "There are no files to show.",
+    "emptyfilelist": "No hay archivos que mostrar.",
     "erroruploadnotworking": "Unfortunately it is currently not possible to upload files to your site.",
     "files": "Files",
     "privatefiles": "Archivos privados",

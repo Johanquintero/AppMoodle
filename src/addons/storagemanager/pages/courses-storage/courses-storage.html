@@ -14,7 +14,7 @@
                 <p class="ion-text-wrap">{{ 'addon.storagemanager.info' | translate }}</p>
                 <ion-item class="size ion-text-wrap ion-no-padding" lines="none">
                     <ion-icon name="fas-archive" slot="start" aria-hidden="true"></ion-icon>
-                    <ion-label><h2 class="ion-text-wrap">{{ 'addon.storagemanager.storageused' | translate }}</h2></ion-label>
+                    <ion-label><h4 class="ion-text-wrap">{{ 'addon.storagemanager.storageused' | translate }}</h4></ion-label>
                     <p slot="end" class="ion-text-end">{{ totalSize | coreBytesToSize }}</p>
                     <ion-button slot="end" (click)="deleteCompletelyDownloadedCourses()"
                         [disabled]="completelyDownloadedCourses.length === 0">
