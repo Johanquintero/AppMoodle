@@ -20,7 +20,7 @@
     "currentlanguage": "Current language",
     "debugdisplay": "Mostrar mensajes de depuración",
     "debugdisplaydescription": "Si está habilitado, los modales de error mostrarán más datos sobre el error si es posible.",
-    "deletesitefiles": "Are you sure that you want to delete the downloaded files and cached data from the site '{{sitename}}'? You won't be able to use the app in offline mode.",
+    "deletesitefiles": "¿Está seguro de que desea eliminar los archivos descargados y los datos almacenados en caché del sitio '{{sitename}}'? ? No podrás usar la aplicación en modo sin conexión.",
     "deletesitefilestitle": "Delete site files",
     "deviceinfo": "Device info",
     "deviceos": "Device OS",

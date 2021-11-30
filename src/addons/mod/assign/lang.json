@@ -69,7 +69,7 @@
     "numberofparticipantscountdescription": "There are {{count}} participantes.",
     "numberofsubmissionsneedgrading": "Needs grading",
     "numberofsubmissionsneedgradingcountdescription": "There are {{count}} submissions that need grading.",
-    "numberofsubmittedassignments": "Submitted",
+    "numberofsubmittedassignments": "Presentado",
     "numberofsubmittedassignmentscountdescription": "There are {{count}} submitted assignments.",
     "numberofteams": "Groups",
     "numberofteamscountdescription": "There are {{count}} teams.",
